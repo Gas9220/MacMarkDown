@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("editorFontSize") var editorFontSize: Int = 14
     @Binding var document: MacMarkDownDocument
 
     var body: some View {
         HSplitView {
             TextEditor(text: $document.text)
+                .font(.system(size: CGFloat(editorFontSize)))
                 .frame(minWidth: 200)
+            
             WebView(html: document.html)
                 .frame(minWidth: 200)
         }
