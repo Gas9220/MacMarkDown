@@ -13,7 +13,10 @@ struct MacMarkDownApp: App {
         DocumentGroup(newDocument: MacMarkDownDocument()) { file in
             ContentView(document: file.$document)
         }
-
+        .commands {
+            MenuCommands()
+        }
+        
         Settings {
             SettingsView()
         }
