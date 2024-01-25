@@ -12,6 +12,8 @@
 		6BDF1C442B628BE100D32146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF1C432B628BE100D32146 /* ContentView.swift */; };
 		6BDF1C462B628BE300D32146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF1C452B628BE300D32146 /* Assets.xcassets */; };
 		6BDF1C492B628BE300D32146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF1C482B628BE300D32146 /* Preview Assets.xcassets */; };
+		6BDF1C532B628E2A00D32146 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BDF1C522B628E2A00D32146 /* MarkdownKit */; };
+		6BDF1C552B628E2A00D32146 /* MarkdownKitProcess in Frameworks */ = {isa = PBXBuildFile; productRef = 6BDF1C542B628E2A00D32146 /* MarkdownKitProcess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDF1C552B628E2A00D32146 /* MarkdownKitProcess in Frameworks */,
+				6BDF1C532B628E2A00D32146 /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +94,10 @@
 			dependencies = (
 			);
 			name = MacMarkDown;
+			packageProductDependencies = (
+				6BDF1C522B628E2A00D32146 /* MarkdownKit */,
+				6BDF1C542B628E2A00D32146 /* MarkdownKitProcess */,
+			);
 			productName = MacMarkDown;
 			productReference = 6BDF1C3C2B628BE100D32146 /* MacMarkDown.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 6BDF1C332B628BE100D32146;
+			packageReferences = (
+				6BDF1C512B628E2A00D32146 /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
+			);
 			productRefGroup = 6BDF1C3D2B628BE100D32146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +360,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BDF1C512B628E2A00D32146 /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-markdownkit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BDF1C522B628E2A00D32146 /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BDF1C512B628E2A00D32146 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			productName = MarkdownKit;
+		};
+		6BDF1C542B628E2A00D32146 /* MarkdownKitProcess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BDF1C512B628E2A00D32146 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			productName = MarkdownKitProcess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BDF1C342B628BE100D32146 /* Project object */;
 }
