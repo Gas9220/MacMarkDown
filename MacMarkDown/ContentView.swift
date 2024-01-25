@@ -13,8 +13,11 @@ struct ContentView: View {
     var body: some View {
         HSplitView {
             TextEditor(text: $document.text)
+                .frame(minWidth: 200)
             WebView(html: document.html)
+                .frame(minWidth: 200)
         }
+        .frame(minWidth: 400, minHeight: 300)
     }
 }
 
